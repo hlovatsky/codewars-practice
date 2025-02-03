@@ -4,10 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-/*
-https://www.codewars.com/kata/5412509bd436bd33920011bc
- */
-
 class MaskTest {
 
     Mask mask = new Mask();

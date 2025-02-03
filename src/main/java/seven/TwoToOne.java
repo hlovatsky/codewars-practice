@@ -4,6 +4,10 @@ import java.util.Comparator;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+/*
+https://www.codewars.com/kata/5656b6906de340bd1b0000ac
+ */
+
 public class TwoToOne {
 
     public String sorting(String a, String b) {
