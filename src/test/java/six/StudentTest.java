@@ -50,4 +50,14 @@ class StudentTest {
         Map<String, List<String>> actualResult = Operation.getStudentsNames(students);
         assertEquals(expectedResult, actualResult);
     }
+
+    @Test
+    void testGenderCountingInDepartment() {
+        Map<String, Map<Gender, Long>> actualResult = Operation.getStudentsByGender(students);
+        Map<String, Map<Gender, Long>> expectedResult = Map.of(
+                QUALITY, Map.of(Gender.FEMALE, 2L, Gender.MALE, 1L),
+                TECHNIC, Map.of(Gender.MALE, 1L)
+        );
+        assertEquals(expectedResult, actualResult);
+    }
 }

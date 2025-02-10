@@ -2,8 +2,7 @@ package six.aggregateoperation;
 
 import lombok.experimental.UtilityClass;
 
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @UtilityClass
@@ -35,5 +34,15 @@ public class Operation {
         return students.stream()
                 .collect(Collectors.groupingBy(Student::getDepartment,
                         Collectors.mapping(Student::getName, Collectors.toList())));
+    }
+
+    /*
+    https://www.codewars.com/kata/59623e9450091000150000d2
+     */
+
+    public static Map<String, Map<Gender, Long>> getStudentsByGender(List<Student> students) {
+        return students.stream()
+                .collect(Collectors.groupingBy(Student::getDepartment,
+                        Collectors.groupingBy(Student::getGender, Collectors.counting())));
     }
 }
