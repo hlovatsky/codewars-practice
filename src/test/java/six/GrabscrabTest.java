@@ -12,9 +12,9 @@ class GrabscrabTest {
     @Test
     void testGrabscrab() {
         var matchedList = List.of("sport", "ports");
-        assertEquals(matchedList, grabscrab.getListOfMatchedWords("ortsp", new String[]{"sport", "parrot", "ports", "matey"}));
+        assertEquals(matchedList, grabscrab.getListOfMatchedWords("ortsp", List.of("sport", "parrot", "ports", "matey")));
 
         var expectedResult= List.of();
-        assertEquals(expectedResult, grabscrab.getListOfMatchedWords("ortspdfree", new String[]{"sport", "parrot", "ports", "matey"}));
+        assertEquals(expectedResult, grabscrab.getListOfMatchedWords("ortspdfree", List.of("sport", "parrot", "ports", "matey")));
     }
 }
